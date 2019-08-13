@@ -202,14 +202,13 @@
 /* BG */
 
 	#bg {
-		@include vendor('animation', 'bg #{_duration(bg)} linear infinite');
+		// @include vendor('animation', 'bg #{_duration(bg)} linear infinite'); // remove animation
 		@include vendor('backface-visibility', 'hidden');
 		@include vendor('transform', 'translate3d(0,0,0)');
 
 		/* Set your background with this */
 		background: _misc(bg);
-
-		background-repeat: repeat-x;
+		background-repeat: no-repeat;
 		height: 100%;
 		left: 0;
 		opacity: 1;
@@ -229,7 +228,7 @@
 	#overlay {
 		@include vendor('animation', 'overlay #{_duration(overlay)} #{$delay-overlay} forwards');
 		background-attachment: fixed, fixed;
-		background-image: url('images/overlay-pattern.png'), url('images/overlay.svg');
+		background-image: url('../images/overlay-pattern.png'), url('../images/overlay.svg');
 		background-position: top left, center center;
 		background-repeat: repeat, no-repeat;
 		background-size: auto, cover;

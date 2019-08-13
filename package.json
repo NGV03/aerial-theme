@@ -1,0 +1,32 @@
+{
+  "name": "aerial-theme",
+  "version": "1.0.0",
+  "description": "A website template with a weather API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NGV03/aerial-theme.git"
+  },
+  "keywords": [
+    "template"
+  ],
+  "author": "Neha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NGV03/aerial-theme/issues"
+  },
+  "homepage": "https://github.com/NGV03/aerial-theme#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "del": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.12.0"
+  }
+}
