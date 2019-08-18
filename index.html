@@ -6,9 +6,10 @@
 -->
 <html>
 	<head>
-		<title>Aerial by HTML5 UP</title>
+		<title>Neha Vekaria</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
@@ -16,34 +17,47 @@
 		<div id="wrapper">
 			<div id="bg"></div>
 			<div id="overlay"></div>
-			<div id="main">
-
+			<div id="main">	
+				
+				<!-- weather widget -->
+					<article class="widget">
+							<div class="weatherIcons" >
+								<div class="temperature"><span id="data-temperature">25</span>&deg;</div><i class="weatherIcons" id="data-icon"></i></div>
+								<div class="weatherInfo">
+							  	<div class="description">    
+								<div class="weatherCondition" id="data-weatherCondition">SUNNY</div>    
+								<div class="place" id="data-place">New York, New York</div>
+							  </div>
+							</div>
+						   <div class= "weatherDescription" id="data-description">clear sky</div>
+						  </article>
 				<!-- Header -->
 					<header id="header">
-						<h1>Adam Jensen</h1>
-						<p>Security Chief &nbsp;&bull;&nbsp; Cyborg &nbsp;&bull;&nbsp; Never asked for this</p>
+						<h1>Neha Vekaria</h1>
+						<p>Software and Web developer &nbsp;&bull;&nbsp; Graduate Student</p>
 						<nav>
 							<ul>
-								<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-								<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+								<!--credits- font awesome free icons -->
+								<li><a href="https://github.com/NGV03" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								<li><a href="mailto:nehavekaria@live.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+								<li><a href="https://www.linkedin.com/in/neha-vekaria/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 							</ul>
 						</nav>
 					</header>
-
+					
 				<!-- Footer -->
 					<footer id="footer">
-						<span class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
+						<span class="copyright">&copy; Neha Vekaria. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
 					</footer>
-
 			</div>
 		</div>
+		
 		<script>
 			window.onload = function() { document.body.classList.remove('is-preload'); }
 			window.ontouchmove = function() { return false; }
 			window.onorientationchange = function() { document.body.scrollTop = 0; }
 		</script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="assets/js/main.js"></script>
 	</body>
 </html>

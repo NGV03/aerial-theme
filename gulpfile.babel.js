@@ -3,6 +3,7 @@ import babel from 'gulp-babel';
 import sass from 'gulp-sass';
 import del from 'del';
 
+//using gulp build tool to compile scss to css
 const paths = {
     styles: {
         src: 'private/sass/main.scss',

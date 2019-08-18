@@ -5,7 +5,8 @@
 @import 'libs/breakpoints';
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
 @import url("fontawesome-all.min.css");
-
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css);
 /*
 	Aerial by HTML5 UP
 	html5up.net | @ajlkn
@@ -31,7 +32,7 @@
 
 		#bg {
 			background-size: $width auto;
-			width: ($width * 3);
+			width: 100% !important;
 		}
 	}
 
@@ -40,7 +41,107 @@
 	$delay-header:			$delay-overlay + _duration(overlay) - 0.75s;
 	$delay-nav-icons:		$delay-header + _duration(header) - 1s;
 	$delay-nav-icon:		0.25s;
+	$border-radius: 20px;
 
+// widget styling
+body {
+  background-color: #A64253;
+  font-family: Poiret One;
+  
+}
+
+.widget {
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  display: flex;
+  height: 150px;
+  width: 300px;
+  transform: translate(-50%, -50%);
+  flex-wrap: wrap;
+  cursor: pointer;
+  border-radius: $border-radius;
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+  
+  .weatherIcons{
+    flex: 1 100%;
+    height: 60%;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    background:#080705;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 60px;
+    
+    i{
+      padding-top: 30px;
+	}
+	.temperature{
+		flex: 0 0 40%;
+		width: 100%;
+		font-size: 30px;
+		display: flex;
+		padding-left: 60px;
+		justify-content: space-around;
+	  }
+  }
+  
+  .weatherInfo{
+    flex: 0 0 60%;
+    height: 40%;
+    background: #080705;
+    border-bottom-left-radius: $border-radius;
+    display: flex;
+    align-items: center;
+    color: white;
+    
+    
+    
+    .description{
+      flex: 0 60%;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      
+      .weatherCondition{
+        text-transform: uppercase;
+        font-size: 25px;
+		font-weight: 70;
+		margin-left: 60px;
+		
+      }
+      
+      .place{
+		font-size: 15px;
+		padding-left: 60px;
+      }
+    }
+  }
+  
+  .weatherDescription{
+    flex: 0 0 40%;
+    height: 40%;
+    background: #70C1B3;
+    border-bottom-right-radius: $border-radius;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 800;
+  }
+}
+
+p{
+  a{
+    text-decoration: none;
+    color: #E4D6A7;
+    font-size: 10px;
+  }
+}
 // Reset.
 // Based on meyerweb.com/eric/tools/css/reset (v2.0 | 20110126 | License: public domain)
 
@@ -60,7 +161,7 @@
 		border: 0;
 		font-size: 100%;
 		font: inherit;
-		vertical-align: baseline;
+		vertical-align: baseline;background-size: cover;
 	}
 
 	article, aside, details, figcaption, figure,
@@ -140,8 +241,8 @@
 
 	body, input, select, textarea {
 		color: _palette(fg);
-		font-family: 'Source Sans Pro', sans-serif;
-		font-size: 15pt;
+		font-family: 'Poppins', sans-serif;  //changed font family to poppins
+		font-size: 16px;
 		font-weight: 300 !important;
 		letter-spacing: -0.025em;
 		line-height: 1.75em;
@@ -157,6 +258,13 @@
 		&:hover {
 			border-color: transparent;
 		}
+	}
+
+	img{
+		display: flex;
+		width: 100px;
+		margin-left: auto;
+		margin-bottom: 20px;
 	}
 
 /* Icon */
@@ -214,6 +322,7 @@
 		opacity: 1;
 		position: fixed;
 		top: 0;
+		background-size: cover !important;
 	}
 
 	@include bg(_misc(bg-width) * 1.5);
